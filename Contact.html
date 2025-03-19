@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <header>
+                <h1>Contact Us</h1>
+            </header>
+            <div class="section-header">
+                <h2>Get in Touch with Us...</h2>
+                <p class="section-subtitle">We're Here to Help You Succeed!!</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Visit Us</h3>
+                        <p></p>BUMBOGO, Birembo, Kigali-Rwanda </p>
+                        <a href="https://maps.app.goo.gl/7PKn5wCJbauJCMhe8" target="_blank" class="directions-link">Get Directions</a>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Call Us</h3>
+                        <p>
+                            <a href="tel:+250784982052">+250 784 982 052</a><br>
+                            <a href="tel:+27987654321"></a>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>
+                            <a href="mailto:info@saibprofessionals.co.za">saibtrainingprofessionals@gmail.com</a><br>
+                            <a href="mailto:training@saibprofessionals.co.za">serviceatbest21@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 8:00 AM - 5:00 PM</p>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1AFytGV64s/" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/feed/?trk=onboarding-landing" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/saib.trainings.professionals/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm" onsubmit="return handleSubmit(event)">
+                        <div class="form-header">
+                            <h3>Send Us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you shortly.</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-message" id="nameError"></span>
+                                <label for="name">Name:</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                                <label for="email">Email:</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="tel" id="phone" name="phone" pattern="[0-9+\s-]{10,}" title="Please enter a valid phone number">
+                                <label for="phone">Phone Number (Optional)</label>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                            <div class="input-group">
+                                <select id="course" name="course" required>
+                                    <option value="">Select Course</option>
+                                    <option value="food-safety">Food Safety</option>
+                                    <option value="fire-safety">Fire Safety</option>
+                                    <option value="first-aid">First Aid</option>
+                                    <option value="haccp">HACCP</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label for="course">Interested Course</label>
+                                <span class="error-message" id="courseError"></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <div class="form-footer">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                            </button>
+                            <div class="form-status" id="formStatus"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">Why is HACCP important?</div>
+                        <div class="faq-answer">HACCP is important because it:
+
+                            Prevents foodborne illnesses by identifying and controlling risks.
+                            Ensures compliance with food safety regulations.
+                            Enhances consumer confidence in food products.
+                            Reduces food waste by preventing contamination.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Who needs to implement HACCP?</div>
+                        <div class="faq-answer">HACCP should be implemented by any business involved in the food chain, including:
+
+                            Food manufacturers and processors
+                            Restaurants and catering services
+                            Retailers and distributors
+                            Dairy, meat, seafood, and beverage industries.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How does HACCP improve food safety?</div>
+                        <div class="faq-answer">HACCP improves food safety by:
+
+                            Identifying hazards before they cause harm.
+                            Ensuring proper monitoring at critical points in food processing.
+                            Providing a structured approach to food safety management.
+                            Reducing recalls and legal risks for food businesses.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps Integration -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578.2516823655307!2d30.0638232!3d-1.3778861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d1a9d8b1e7b7e3%3A0x7c8f0f0c9f8e5f6e!2sKigali%2C%20Bumbogo%2C%20Gasabo%20District!5e0!3m2!1sen!2sus!4v1645794793976!5m2!1sen!2sus"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Company Info -->
+                        <div class="footer-section">
+                            <img src="images/Logo.png" alt="SAIB Professionals Ltd" class="footer-logo">
+                            <p class="company-description">
+                                Professional training solutions for Food Safety, Fire Safety, and First Aid. Trusted by thousands of professionals across the industry.
+                            </p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:saibtrainingsprofessionals@gmail.com">saibtrainingsprofessionals@gmail.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:+250 784 982 052">+250 784 982 052</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Kigali, Rwanda<br>KIMIRONKO, Birembo,Bumbogo,Gasabo District</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Quick Links -->
+                        <div class="footer-section">
+                            <h4>Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="courses.html">Training Courses</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="#privacy">Privacy Policy</a></li>
+                                <li><a href="#terms">Terms of Service</a></li>
+                            </ul>
+                        </div>
+    
+                        <!-- Our Courses -->
+                        <div class="footer-section">
+                            <h4>Our Courses</h4>
+                            <ul class="footer-links">
+                                <li><a href="courses.html#food-safety-section">Food Safety & Hygiene Training</a></li>
+                                <li><a href="courses.html#fire-safety-section">Fire Safety Training</a></li>
+                                <li><a href="courses.html#first-aid-section">First Aid Training</a></li>
+                                <li><a href="courses.html#HACCP-Section">HACCP Training</a></li>
+                                <li><a href="#certification">Certification</a></li>
+                            </ul>
+                        </div>
+                        <!-- Newsletter -->
+                    <div class="footer-section">
+                        <h4>Newsletter</h4>
+                        <p class="newsletter-text">Subscribe to our newsletter for updates, training tips, and special offers.</p>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="btn-subscribe">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <h4>FOLLOW US</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1AFytGV64s/" aria-label="Facebook" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="black">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/feed/?trk=onboarding-landing" aria-label="LinkedIn" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="black">
+                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                                    <rect x="2" y="9" width="4" height="12" fill="black"/>
+                                    <circle cx="4" cy="4" r="2" fill="black"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/saib.trainings.professionals/" aria-label="Instagram" class="social-link">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="black">
+                                <rect x="2" y="2" width="20" height="20" rx="5" fill="black"/>
+                                <path d="M17 14c0 2.76-2.29 5-5 5s-5-2.24-5-5 2.29-5 5-5 5 2.24 5 5zM14 14c0 2.76-2.29 5-5 5s-5-2.24-5-5 2.29-5 5-5 5 2.24 5 5zM7 14c0 2.76-2.29 5-5 5s-5-2.24-5-5 2.29-5 5-5 5 2.24 5 5zm14 0c0 2.76-2.29 5-5 5s-5-2.24-5-5 2.29-5 5-5 5 2.24 5 5z"/>
+                                <circle cx="12" cy="12" r="4" fill="blue"/>
+                                <circle cx="17" cy="7" r="1" fill="blue"/>
+                            </svg>
+                            </a>
+                            </div>
+                            <div class="certifications">
+                                <h3>Our Certification</h3>
+                                <div class="cert-showcase">
+                                    <img src="images/SAIB-CERTIFICATE.png" alt="SAIB Professional Certificate" class="cert-image">
+                                    <div class="cert-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                        <span>Click to view</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>&copy; 2025 SAIB Professionals Ltd. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#sitemap">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
