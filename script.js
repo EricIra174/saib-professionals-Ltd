@@ -435,7 +435,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return false;
         }
         
-        // Simulate form submission
+        // Prepare form data
+        const formData = new FormData(event.target);
+        
+        // Show loading state
         const submitButton = event.target.querySelector('button[type="submit"]');
         const buttonText = submitButton.querySelector('.btn-text');
         const originalText = buttonText.textContent;
@@ -443,14 +446,29 @@ document.addEventListener('DOMContentLoaded', () => {
         submitButton.disabled = true;
         buttonText.textContent = 'Sending...';
         
-        // Simulate API call
-        setTimeout(() => {
-            showFormStatus('success', 'Thank you! Your message has been sent successfully.');
-            event.target.reset();
-            
+        // Submit to Formspree
+        fetch(event.target.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                showFormStatus('success', 'Thank you! Your message has been sent successfully.');
+                event.target.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            showFormStatus('error', 'Sorry, there was an error sending your message. Please try again.');
+        })
+        .finally(() => {
             submitButton.disabled = false;
             buttonText.textContent = originalText;
-        }, 1500);
+        });
         
         return false;
     }
